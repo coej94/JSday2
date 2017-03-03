@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>ex3</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .mydiv{
+                width:25px;height:25px;
+                background-color: yellow; margin: 2px;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <p id="Fun">hej</p>
+        </div>
+        <div id="hejsa">
+        <div class="mydiv" id="d1"></div>
+        <div class="mydiv" id="d2"></div>
+        <div class="mydiv" id="d3"></div>
+        <div class="mydiv" id="d4"></div>
+        </div>
+        <script>
+            var funny = document.getElementById("hejsa");
+            funny.addEventListener("click", paste);
+            function paste(evt) {
+                var thediv = evt.target;
+                document.getElementById("Fun").innerText= thediv.id;
+                console.log(this.id);
+            }
+        </script>
+    </body>
+</html>

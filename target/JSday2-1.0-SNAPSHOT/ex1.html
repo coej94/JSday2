@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ex1</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+        <h1>Dom træning</h1>
+
+        <button id="btn">Color Divs</button>
+
+        <div id="d1" style="width: 25px; height: 25px;">
+
+        </div>
+        <div id="d2" style="width:25px;height:25px;">
+
+        </div>
+        <div id="d3" style="width: 25px;height: 25px;">
+
+        </div>
+
+
+        <script>
+            var divs = document.getElementsByTagName("div");
+            for (var i = 0; i < divs.length; i++) {
+                divs[i].style.backgroundColor = "red";
+            }
+
+            var btn = document.getElementById("btn");
+            btn.addEventListener("click", clickHandler);
+
+            function clickHandler(evt) {
+                var divs = document.getElementsByTagName("div");
+                divs[0].style.backgroundColor = "yellow";
+                divs[1].style.backgroundColor = "green";
+                divs[2].style.backgroundColor = "blue";
+            }
+        </script>   
+    </body>
+</html>

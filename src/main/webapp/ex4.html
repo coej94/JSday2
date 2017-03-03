@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>ex4</div>
+        <div id="x"></div>
+        <input type="text" id="nn"><button id="btn">new name</button>
+        <script>
+            //We create an arrayList.
+            var names = ["Lars", "peter", "mig", "dig"];
+            //Create a listMaker Function.
+            function listMaker(arr) {
+                //Create a new arrayList from names, and call the new list lis.
+                var lis = arr.map(function (name) {
+                    //Return a line in HTML
+                    return "<li>" + name + "</li>";
+                });
+                //Return a new unordered list. 
+                return "<ul>" + lis.join("") + "</ul>";
+            }
+            //Create the list in the html div with id "x".
+            document.getElementById("x").innerHTML = listMaker(names);
+            // document.getElementById("btn"); // <-- Hvorfor er dette nødvendigt?
+            btn.addEventListener("click", function () {
+                var nn = document.getElementById("nn").value; //<-- Hvorfor behøver vi den??
+                names.push(nn);
+                document.getElementById("x").innerHTML = listMaker(names);
+            });
+        </script>
+    </body>
+</html>
